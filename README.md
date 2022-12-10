@@ -4,3 +4,13 @@ The introduction of online payment systems has made payments easier. But at the 
 
 Identifing online payment fraud through machine learning model to classify fraudulent and non fraudulent payments. To do we need a dataset containing information on online payment fraud to understand the types of transactions that lead to fraud. For this work I collected a <a href="https://www.kaggle.com/ealaxi/paysim1/download">dataset</a> from Kaggle contaning historical information about fraudulent transactions for detecting online payment fraud. Here are all the columns in the dataset Im using here:
  
+1.step: represents a unit of time where 1 step equals 1 hour
+2.type: type of online transaction
+3.amount: the amount of the transaction
+4.nameOrig: customer starting the transaction
+5.oldbalanceOrg: balance before the transaction
+6.newbalanceOrig: balance after the transaction
+7.nameDest: recipient of the transaction
+8.oldbalanceDest: initial balance of recipient before the transaction
+9.newbalanceDest: the new balance of recipient after the transaction
+10.isFraud: fraud transaction
