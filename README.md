@@ -15,3 +15,7 @@ Identifing online payment fraud through machine learning model to classify fraud
 <li>oldbalanceDest: initial balance of recipient before the transaction</li>
 <li>newbalanceDest: the new balance of recipient after the transaction</li>
 <li>isFraud: fraud transaction</li></b>
+
+
+<h2>I start this task by importing the Python libraries and datasets required for this task:<h2>
+<<img alt="" class="bg jh ji c" width="700" height="394" loading="eager" role="presentation" src="1.png">
