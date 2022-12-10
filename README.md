@@ -20,22 +20,17 @@ Identifing online payment fraud through machine learning model to classify fraud
 <h2>I start this task by importing the Python libraries and datasets required for this task:<h2>
 import pandas as pd
 import numpy as np
-data =pd.read_csv("Credit Card.csv")
+data = pd.read_csv("credit card.csv")
 print(data.head())
-import pandas as pd
-import numpy as np
-data =pd.read_csv("Credit Card.csv")
-print(data.head())
-   step      type    amount     nameOrig  oldbalanceOrg  newbalanceOrig  \
-0     1   PAYMENT   9839.64  C1231006815       170136.0       160296.36   
-1     1   PAYMENT   1864.28  C1666544295        21249.0        19384.72   
-2     1  TRANSFER    181.00  C1305486145          181.0            0.00   
-3     1  CASH_OUT    181.00   C840083671          181.0            0.00   
-4     1   PAYMENT  11668.14  C2048537720        41554.0        29885.86   
+   
+<h2>Now, let’s have a look at whether this dataset has any null values or not:</h2>
+print(data.isnull().sum())
 
-      nameDest  oldbalanceDest  newbalanceDest  isFraud  isFlaggedFraud  
-0  M1979787155             0.0             0.0        0               0  
-1  M2044282225             0.0             0.0        0               0  
-2   C553264065             0.0             0.0        1               0  
-3    C38997010         21182.0             0.0        1               0  
-4  M1230701703             0.0             0.0        0               0  
+<h2>So this dataset does not have any null values. Before moving forward, now, let’s have a look at the type of transaction mentioned in the dataset:</h2>
+# Exploring transaction type
+print(data.type.value_counts())
+   
+
+
+
+   
