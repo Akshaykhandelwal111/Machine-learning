@@ -18,4 +18,4 @@ Identifing online payment fraud through machine learning model to classify fraud
 
 
 <h2>I start this task by importing the Python libraries and datasets required for this task:<h2>
-<<img alt="" class="bg jh ji c" width="700" height="394" loading="eager" role="presentation" src="1.png">
+<img alt="" class="bg jh ji c" width="700" height="394" loading="eager" role="presentation" src="1.png">
