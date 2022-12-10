@@ -23,10 +23,10 @@ import numpy as np
 data = pd.read_csv("credit card.csv")
 print(data.head())
    
-<h2>Now, let’s have a look at whether this dataset has any null values or not:</h2>
+<h3>Now, let’s have a look at whether this dataset has any null values or not:</h3>
 print(data.isnull().sum())
 
-<h2>So this dataset does not have any null values. Before moving forward, now, let’s have a look at the type of transaction mentioned in the dataset:</h2>
+<h3>So this dataset does not have any null values. Before moving forward, now, let’s have a look at the type of transaction mentioned in the dataset:</h3>
 # Exploring transaction type
 print(data.type.value_counts())
   
@@ -41,13 +41,13 @@ figure = px.pie(data,
              title="Distribution of Transaction Type")
 figure.show()
 
-<h2>Now let’s have a look at the correlation between the features of the data with the isFraud column:</h2>
+<h3>Now let’s have a look at the correlation between the features of the data with the isFraud column:</h3>
 
 # Checking correlation
 correlation = data.corr()
 print(correlation["isFraud"].sort_values(ascending=False))
 
-<h2>Now let’s transform the categorical features into numerical. Here I will also transform the values of the isFraud column into No Fraud and Fraud labels to have a better understanding of the output:</h2>
+<h3>Now let’s transform the categorical features into numerical. Here I will also transform the values of the isFraud column into No Fraud and Fraud labels to have a better understanding of the output:</h3>
 
 data["type"] = data["type"].map({"CASH_OUT": 1, "PAYMENT": 2, 
                                  "CASH_IN": 3, "TRANSFER": 4,
@@ -55,15 +55,15 @@ data["type"] = data["type"].map({"CASH_OUT": 1, "PAYMENT": 2,
 data["isFraud"] = data["isFraud"].map({0: "No Fraud", 1: "Fraud"})
 print(data.head())
 
-<h1>Online Payments Fraud Detection Model</h1>
-<h2>Now let’s train a classification model to classify fraud and non-fraud transactions. Before training the model, I will split the data into training and test sets</h2>
+<h2>Online Payments Fraud Detection Model</h2>
+<h3>Now let’s train a classification model to classify fraud and non-fraud transactions. Before training the model, I will split the data into training and test sets</h3>
 
 # splitting the data
 from sklearn.model_selection import train_test_split
 x = np.array(data[["type", "amount", "oldbalanceOrg", "newbalanceOrig"]])
 y = np.array(data[["isFraud"]])
 
-<h2>Now let’s train the online payments fraud detection model:</h2>
+<h3>Now let’s train the online payments fraud detection model:</h3>
 
 # training a machine learning model
 from sklearn.tree import DecisionTreeClassifier
@@ -72,7 +72,7 @@ model = DecisionTreeClassifier()
 model.fit(xtrain, ytrain)
 print(model.score(xtest, ytest))
 
-<h2>Now let’s classify whether a transaction is a fraud or not by feeding about a transaction into the model:</h2>
+<h3>Now let’s classify whether a transaction is a fraud or not by feeding about a transaction into the model:</h3>
 
 # prediction
 #features = [type, amount, oldbalanceOrg, newbalanceOrig]
